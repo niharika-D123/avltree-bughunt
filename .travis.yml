@@ -1,0 +1,10 @@
+language: java
+sudo: false
+
+jdk:
+  - openjdk8
+
+script:
+  - mvn clean
+  - mvn --fail-never dependency:resolve -DskipITs  install
+
